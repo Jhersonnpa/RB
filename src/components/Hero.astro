@@ -1,13 +1,22 @@
 ---
 import { Image } from 'astro:assets';
 import Container from '@/components/Container.astro';
+import HeroImage from '@/assets/images/hero.webp';
 ---
 
-<section>
+<section class="bg-gradient-to-b from-secondary to-background">
 	<Container>
 		<div>
-			<h1>Instalaciones Fotovoltaicas y Aires Acondicionados en Barcelona | Energía Solar</h1>
-			<div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, sed! Vel, voluptatem? Magnam molestiae enim odit assumenda. Amet alias dicta nihil esse iste cum. Quidem nobis sit ratione maiores optio dolorum cupiditate eaque, eum esse, cumque consectetur deleniti voluptas iure!</p></div>
+			<h1 class="text-4xl">Instalaciones Fotovoltaicas y Aires Acondicionados en Barcelona</h1>
+			<div class="mt-10">
+				<Image
+				src={HeroImage}
+				alt="Hero Imagen" 
+				width={800}
+				height={600}
+				class="rounded-lg shadow-lg"
+				/>
+			</div>
 		</div>
 	</Container>
 </section>

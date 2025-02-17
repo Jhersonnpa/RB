@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import X from "@/components/icons/x.astro";
+
+---
+<nav class="w-full h-screen absolute left-0 top-0 bg-background container mx-auto p-4" id="navbar-mobile">
+  <div class="flex justify-between items-center p-4">
+    <a href="/" rel="noopener noreferrer"
+      ><Image
+        src="/Logo_RB_5.png"
+        alt={"Logo de la empresa"}
+        width={100}
+        height={100}
+        class="w-48"
+      /></a
+    >
+    <button><X/></button>
+  </div>
+  <ul class="flex flex-col p-4 gap-6 font-semibold text-2xl">
+    <li><a class="hover:text-primary transition-colors" href="#services">Servicios</a></li>
+    <li><a class="hover:text-primary transition-colors" href="#portfolio">Casos de Éxito</a></li>
+    <li><a class="hover:text-primary transition-colors" href="#contact">Contacto</a></li>
+  </ul>
+</nav>
