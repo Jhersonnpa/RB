@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import Container from '@/components/Container.astro';
+---
+
+<section>
+	<Container>
+		<div>
+			<h1>Instalaciones Fotovoltaicas y Aires Acondicionados en Barcelona | Energía Solar</h1>
+			<div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, sed! Vel, voluptatem? Magnam molestiae enim odit assumenda. Amet alias dicta nihil esse iste cum. Quidem nobis sit ratione maiores optio dolorum cupiditate eaque, eum esse, cumque consectetur deleniti voluptas iure!</p></div>
+		</div>
+	</Container>
+</section>
+
+<style>
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	@keyframes fadeInDelay {
+		0% { opacity: 0; }
+		50% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+
+	.animate-fade-in {
+		animation: fadeIn 1s ease-out;
+	}
+
+	.animate-fade-in-delay {
+		animation: fadeInDelay 2s ease-out;
+	}
+
+	.animate-bounce {
+		animation: bounce 2s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% { transform: translateY(-5%); }
+		50% { transform: translateY(0); }
+	}
+</style>
+

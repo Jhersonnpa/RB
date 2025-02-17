@@ -1,22 +1,24 @@
+---
+import "@/styles/global.css";
+import '@fontsource-variable/montserrat';
+// Supports weights 200-900
+import '@fontsource-variable/nunito-sans';
+import Header from "@/components/Header.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Instalaciones fotovoltaicas profesionales en Barcelona. Paneles solares, mantenimiento y aire acondicionado. Ahorra en tu factura eléctrica y cuida el medio ambiente." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Instalaciones Fotovoltaicas y Aires Acondicionados en Barcelona | Energía Solar</title>
 	</head>
 	<body>
+		<Header/>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
