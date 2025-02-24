@@ -1,53 +1,111 @@
 ---
-import { Image } from 'astro:assets';
-import Container from '@/components/Container.astro';
-import HeroImage from '@/assets/images/hero.webp';
+import { Image } from "astro:assets";
+import Container from "@/components/Container.astro";
+import HeroImage from "@/assets/images/hero.webp";
 ---
 
 <section class="bg-gradient-to-b from-secondary to-background">
-	<Container>
-		<div>
-			<h1 class="text-4xl">Instalaciones Fotovoltaicas y Aires Acondicionados en Barcelona</h1>
-			<div class="mt-10">
-				<Image
-				src={HeroImage}
-				alt="Hero Imagen" 
-				width={800}
-				height={600}
-				class="rounded-lg shadow-lg"
-				/>
-			</div>
-		</div>
-	</Container>
+  <Container>
+    <div>
+      <div class="flex w-full justify-between items-center">
+        <div class="w-[70%]">
+          <h1 class="text-5xl text-pretty">
+            Instalaciones y Mantenimiento de placas Solares en Barcelona
+          </h1>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="flex flex-col items-end">
+            <div class="flex -space-x-4">
+              <Image
+                alt="Avatar 1"
+                class="w-12 h-12 border-2 rounded-full border-secondary"
+                src="/images/avatar.jpg"
+                height={48}
+                width={48}
+              />
+              <Image
+                alt="Avatar 2"
+                class="w-12 h-12 border-2 rounded-full border-secondary"
+                src="/images/avatar.jpg"
+                height={48}
+                width={48}
+              />
+              <Image
+                alt="Avatar 3"
+                class="w-12 h-12 border-2 rounded-full border-secondary"
+                src="/images/avatar.jpg"
+                height={48}
+                width={48}
+              />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-primary text-3xl font-bold">+400</span>
+            <span class="text-color text-md font-semibold">Clientes felices</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full min-h-[550px] mt-10 relative flex items-end justify-between"
+      >
+        <Image
+          src={HeroImage}
+          alt="Hero Imagen"
+          width={800}
+          height={400}
+          class="w-full h-full absolute rounded-md shadow-sm"
+        />
+        <div class="w-full h-full flex justify-between items-center p-10 z-10">
+          <a href="#" class="bg-tertiary py-1.5 px-3 rounded-sm text-background"
+            >Descubre más</a
+          ><p>texto</p>
+        </div>
+      </div>
+    </div>
+  </Container>
 </section>
 
 <style>
-	@keyframes fadeIn {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-	@keyframes fadeInDelay {
-		0% { opacity: 0; }
-		50% { opacity: 0; }
-		100% { opacity: 1; }
-	}
+  @keyframes fadeInDelay {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
-	.animate-fade-in {
-		animation: fadeIn 1s ease-out;
-	}
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
 
-	.animate-fade-in-delay {
-		animation: fadeInDelay 2s ease-out;
-	}
+  .animate-fade-in-delay {
+    animation: fadeInDelay 2s ease-out;
+  }
 
-	.animate-bounce {
-		animation: bounce 2s infinite;
-	}
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
 
-	@keyframes bounce {
-		0%, 100% { transform: translateY(-5%); }
-		50% { transform: translateY(0); }
-	}
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-5%);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
 </style>
-
