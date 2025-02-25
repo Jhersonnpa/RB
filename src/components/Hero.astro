@@ -7,14 +7,16 @@ import HeroImage from "@/assets/images/hero.webp";
 <section class="bg-gradient-to-b from-secondary to-background">
   <Container>
     <div>
-      <div class="flex w-full justify-between items-center">
-        <div class="w-[70%]">
-          <h1 class="text-5xl text-pretty">
-            Instalaciones y Mantenimiento de placas Solares en Barcelona
+      <div
+        class="flex flex-col md:flex-row w-full justify-between md:items-center gap-4 py-4"
+      >
+        <div class="md:w-[70%]">
+          <h1 class="text-xl md:text-5xl text-pretty">
+            Instalación de placas <span class="text-tertiary">Fotovoltaicas</span> en Barcelona <br><span class="text-sky-950">Energia Renovable</span>
           </h1>
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div class="flex flex-col items-end">
+        <div class="flex md:grid md:grid-cols-2 md:gap-2">
+          <div class="flex flex-col md:items-end">
             <div class="flex -space-x-4">
               <Image
                 alt="Avatar 1"
@@ -41,71 +43,32 @@ import HeroImage from "@/assets/images/hero.webp";
           </div>
           <div class="flex flex-col">
             <span class="text-primary text-3xl font-bold">+400</span>
-            <span class="text-color text-md font-semibold">Clientes felices</span>
+            <span class="text-color text-md font-semibold"
+              >Clientes felices</span
+            >
           </div>
         </div>
       </div>
       <div
-        class="w-full min-h-[550px] mt-10 relative flex items-end justify-between"
+        class="w-full h-72 md:h-96 flex rounded-sm shadow-lg"
+        style="background-image: url('/images/hero-2.webp'); background-size: cover; background-position: top center;"
       >
-        <Image
-          src={HeroImage}
-          alt="Hero Imagen"
-          width={800}
-          height={400}
-          class="w-full h-full absolute rounded-md shadow-sm"
-        />
-        <div class="w-full h-full flex justify-between items-center p-10 z-10">
-          <a href="#" class="bg-tertiary py-1.5 px-3 rounded-sm text-background"
-            >Descubre más</a
-          ><p>texto</p>
+        <div
+          class="w-full h-full flex justify-around items-end rounded-sm p-4 gap-4 bg-gradient-to-b from-transparent to-text/70 font-semibold"
+        >
+          <div class="w-full grid grid-cols-2">
+            <a
+              href="#"
+              class="w-fit h-fit self-end bg-primary/80 hover:bg-primary text-sm text-center py-1.5 px-3 rounded-sm text-background transition-colors"
+            >
+              Empieza ya
+            </a>
+            <p class="text-pretty text-background text-lg">
+              Ahorra un <span class="text-secondary">70%</span> en tu factura.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </Container>
 </section>
-
-<style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInDelay {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 1s ease-out;
-  }
-
-  .animate-fade-in-delay {
-    animation: fadeInDelay 2s ease-out;
-  }
-
-  .animate-bounce {
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(-5%);
-    }
-    50% {
-      transform: translateY(0);
-    }
-  }
-</style>
