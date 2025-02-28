@@ -1,48 +1,59 @@
 ---
-import { Image } from "astro:assets";
 import Container from "@/components/Container.astro";
-import HeroImage from "@/assets/images/hero.webp";
 ---
 
 <section class="bg-gradient-to-b from-secondary to-background">
   <Container>
     <div>
-      <div
-        class="flex flex-col md:flex-row w-full justify-between md:items-center gap-4 py-4"
-      >
-        <div class="md:w-[70%]">
-          <h1 class="text-xl md:text-5xl text-pretty">
-            Instalación de placas <span class="text-tertiary">Fotovoltaicas</span> en Barcelona <br><span class="text-sky-950">Energia Renovable</span>
+      <div class="flex flex-col md:flex-row w-full justify-between md:items-center gap-4">
+        <div class="md:flex-1">
+          <h1 class="text-2xl md:text-5xl text-pretty">
+            Instalación de placas <span class="text-tertiary"
+              >Fotovoltaicas</span
+            > en Barcelona
           </h1>
+          <p class="text-lg font-semibold text-gray-700 mt-1.5">
+            Experto en Energía Renovable
+          </p>
+          <p class="text-text font-semibold">Ray Bazan</p>
         </div>
-        <div class="flex md:grid md:grid-cols-2 md:gap-2">
-          <div class="flex flex-col md:items-end">
-            <div class="flex -space-x-4">
-              <Image
-                alt="Avatar 1"
-                class="w-12 h-12 border-2 rounded-full border-secondary"
-                src="/images/avatar.jpg"
-                height={48}
-                width={48}
-              />
-              <Image
-                alt="Avatar 2"
-                class="w-12 h-12 border-2 rounded-full border-secondary"
-                src="/images/avatar.jpg"
-                height={48}
-                width={48}
-              />
-              <Image
-                alt="Avatar 3"
-                class="w-12 h-12 border-2 rounded-full border-secondary"
-                src="/images/avatar.jpg"
-                height={48}
-                width={48}
-              />
-            </div>
+        <div class="flex md:grid md:grid-cols-2 gap-2 md:gap-4">
+          <div class="flex -space-x-2 overflow-hidden">
+            <img
+              loading="lazy"
+              width={24}
+              height={24}
+              class="inline-block size-10 rounded-full ring-2 ring-secondary"
+              src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="Avatar 1"
+            />
+            <img
+              loading="lazy"
+              width={24}
+              height={24}
+              class="inline-block size-10 rounded-full ring-2 ring-secondary"
+              src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="Avatar 2"
+            />
+            <img
+              loading="lazy"
+              width={24}
+              height={24}
+              class="inline-block size-10 rounded-full ring-2 ring-secondary"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+              alt="Avatar 3"
+            />
+            <img
+              loading="lazy"
+              width={24}
+              height={24}
+              class="inline-block size-10 rounded-full ring-2 ring-secondary"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="Avatar 4"
+            />
           </div>
           <div class="flex flex-col">
-            <span class="text-primary text-3xl font-bold">+400</span>
+            <span class="text-tertiary text-3xl font-bold">+150</span>
             <span class="text-color text-md font-semibold"
               >Clientes felices</span
             >
@@ -50,20 +61,20 @@ import HeroImage from "@/assets/images/hero.webp";
         </div>
       </div>
       <div
-        class="w-full h-72 md:h-96 flex rounded-sm shadow-lg"
-        style="background-image: url('/images/hero-2.webp'); background-size: cover; background-position: top center;"
+        class="w-full h-72 md:h-[500px] flex rounded-lg shadow-lg mt-5"
+        style="background-image: url('/images/instalacion-solar-19.jpeg'); background-size: cover; background-position: center;"
       >
         <div
-          class="w-full h-full flex justify-around items-end rounded-sm p-4 gap-4 bg-gradient-to-b from-transparent to-text/70 font-semibold"
+          class="w-full h-full flex justify-around items-end rounded-sm p-4 md:p-16 gap-4 bg-gradient-to-b from-transparent to-text/70 font-semibold"
         >
           <div class="w-full grid grid-cols-2">
             <a
               href="#"
-              class="w-fit h-fit self-end bg-primary/80 hover:bg-primary text-sm text-center py-1.5 px-3 rounded-sm text-background transition-colors"
+              class="w-fit h-fit self-end hover:bg-green-800 bg-primary text-sm text-center py-1.5 px-3 rounded-sm text-background transition-colors"
             >
-              Empieza ya
+              Presupuesto ya!
             </a>
-            <p class="text-pretty text-background text-lg">
+            <p class="text-pretty text-background text-lg md:text-end">
               Ahorra un <span class="text-secondary">70%</span> en tu factura.
             </p>
           </div>

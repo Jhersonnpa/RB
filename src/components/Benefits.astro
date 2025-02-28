@@ -1,0 +1,186 @@
+---
+import { Image } from "astro:assets";
+import Container from "@/components/Container.astro";
+---
+
+<section class="bg-background">
+  <Container>
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-center text-base/7 md:text-lg font-semibold text-primary">
+        Beneficios de la Energía Solar
+      </h2>
+      <p
+        class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl"
+      >
+        Aprovecha al máximo la energía renovable y ahorra en tus facturas desde
+        el primer día
+      </p>
+      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div class="relative lg:row-span-2">
+          <div
+            class="absolute inset-px rounded-lg bg-accent lg:rounded-l-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]"
+          >
+            <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+              <p
+                class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+              >
+                🔋 Ahorro energético
+              </p>
+              <p
+                class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+              >
+                Reduce tu factura de luz hasta un 70% gracias a la instalación
+                de paneles solares de alta eficiencia. Al generar tu propia
+                energía, disminuyes la dependencia de las compañías eléctricas y
+                te proteges frente a la subida de tarifas. Menos gastos, más
+                ahorro a largo plazo.
+              </p>
+            </div>
+            <div
+              class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm"
+            >
+              <div
+                class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-secondary bg-gray-900 shadow-2xl"
+              >
+                <Image
+                  width={400}
+                  height={400}
+                  class="size-full object-cover object-top"
+                  src="/images/beneficios-1.webp"
+                  alt="Persona feliz con su factura de luz"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"
+          >
+          </div>
+        </div>
+        <div class="relative max-lg:row-start-1">
+          <div
+            class="absolute inset-px rounded-lg bg-accent max-lg:rounded-t-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]"
+          >
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+              <p
+                class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+              >
+                🌎 Energía 100% limpia
+              </p>
+              <p
+                class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+              >
+                Aprovecha el poder del sol con una fuente de energía renovable y
+                ecológica. Al reducir las emisiones de CO₂, contribuyes
+                activamente a la lucha contra el cambio climático y fomentas un
+                futuro más sostenible. Tu hogar o empresa será más eficiente y
+                respetuoso con el medioambiente.
+              </p>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"
+            >
+              <Image
+                width={400}
+                height={400}
+                class="w-full max-lg:max-w-xs rounded-lg"
+                src="/images/beneficios-2.webp"
+                alt="Panel solar en un tejado"
+              />
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"
+          >
+          </div>
+        </div>
+        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+          <div class="absolute inset-px rounded-lg bg-accent"></div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+          >
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+              <p
+                class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+              >
+                📈 Aumento del valor de tu propiedad
+              </p>
+              <p
+                class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+              >
+                Las viviendas con sistemas de energía solar son más atractivas
+                en el mercado inmobiliario, aumentando su valor hasta un 20%.
+                Además, las certificaciones energéticas mejoradas hacen que sea
+                más fácil vender o alquilar tu propiedad con ventajas
+                competitivas.
+              </p>
+            </div>
+            <div
+              class="flex flex-1 items-center px-8 sm:px-10 [container-type:inline-size] max-lg:py-6 lg:pb-2"
+            >
+              <Image
+                width={400}
+                height={400}
+                class="h-[min(152px,40cqw)] object-cover rounded-lg"
+                src="/images/beneficios-3.webp"
+                alt="Aumento del valor de una casa con paneles solares"
+              />
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"
+          >
+          </div>
+        </div>
+        <div class="relative lg:row-span-2">
+          <div
+            class="absolute inset-px rounded-lg bg-accent max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+          >
+          </div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]"
+          >
+            <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+              <p
+                class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center"
+              >
+                💰 Subvenciones y deducciones fiscales
+              </p>
+              <p
+                class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"
+              >
+                En España, puedes acceder a subvenciones, bonificaciones del IBI
+                y deducciones fiscales por instalar paneles solares. Esto
+                significa que recuperarás la inversión mucho más rápido y
+                disfrutarás de un mayor retorno económico.
+              </p>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2"
+            >
+              <Image
+                width={400}
+                height={400}
+                class="w-full h-full md:h-[500px] max-lg:max-w-xs rounded-lg"
+                src="/images/beneficios-4.webp"
+                alt="Panel solar en un tejado"
+              />
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
