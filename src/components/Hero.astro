@@ -62,18 +62,21 @@ import { Image } from "astro:assets";
       <div
         class="w-full h-72 md:h-[500px] flex rounded-lg shadow-lg mt-5 relative"
       >
-        <Image
+        <img
           width={500}
           height={500}
           class="w-full h-full object-cover rounded-lg z-0"
           src="/images/hero.webp"
-          alt="Instalación de placas solares"
+          alt="Instalación de placas solares Hero imagen"
+          decoding="async"
         />
 
         <div
           class="absolute inset-0 w-full h-full flex justify-around items-end rounded-sm p-4 md:p-16 gap-4 font-semibold bg-gradient-to-b from-transparent to-text/90"
         >
-          <div class="w-full flex flex-col-reverse justify-center items-center gap-2 md:grid md:grid-cols-2">
+          <div
+            class="w-full flex flex-col-reverse justify-center items-center gap-2 md:grid md:grid-cols-2"
+          >
             <a
               name="Whatsapp"
               href="https://wa.me/34692488608"
