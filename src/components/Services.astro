@@ -1,0 +1,121 @@
+---
+import Container from "@/components/Container.astro";
+import SolarPanel from "@/components/icons/solar-panel.astro";
+import Tool from "@/components/icons/tool.astro";
+import HomeStats from "@/components/icons/home-stats.astro";
+---
+
+<section id="services" class="isolate w-full">
+  <Container>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <p class="text-lg font-semibold text-primary">
+          Ahorra más, cuida el planeta y disfruta de energía 100% renovable
+        </p>
+        <h3
+          class="mt-2 text-pretty text-3xl font-semibold tracking-tight text-text sm:text-5xl lg:text-balance"
+        >
+          Sáca el Máximo Provecho al Sol con Nuestros Servicios Solares
+        </h3>
+        <p class="mt-6 text-lg/8 text-gray-600">
+          Somos especialistas en instalación y mantenimiento de placas solares
+          en Barcelona. Te ayudamos a reducir tu factura de luz, optimizar tu
+          sistema y sacarle el máximo partido a la energía solar.
+        </p>
+        <p class="mt-6 text-lg/8 text-gray-600">
+          💡 Soluciones personalizadas para hogares y empresas. ¡Haz que el sol
+          trabaje para ti!
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl
+          class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+        >
+          <div class="relative pl-16">
+            <dt class="text-base/7 font-semibold text-text">
+              <div
+                class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-secondary"
+              >
+                <SolarPanel />
+              </div>
+              Instalación de Placas Solares Fotovoltaicas
+            </dt>
+            <dd class="mt-2 text-base/7 text-gray-600">
+              <p class="font-bold">
+                Energía solar a medida para hogares y empresas.
+              </p>
+              <p class="mt-2">
+                Realizamos la instalación de sistemas fotovoltaicos con equipos
+                de última tecnología, asegurando la máxima eficiencia y
+                rentabilidad.
+              </p>
+              <ul class="mt-2">
+                <p class="font-bold">Beneficios clave:</p>
+                <li>✔️ Ahorro inmediato en la factura de luz ⚡</li>
+                <li>✔️ Instalaciones certificadas y 100% legales ✅</li>
+                <li>✔️ Energía 100% renovable ♻️</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base/7 font-semibold text-text">
+              <div
+                class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-secondary"
+              >
+                <Tool />
+              </div>
+              Mantenimiento Preventivo de Paneles Solares
+            </dt>
+            <dd class="mt-2 text-base/7 text-gray-600">
+              <p class="font-bold">
+                Maximiza el rendimiento de tu instalación y evita fallos
+              </p>
+              <p class="mt-2">
+                Un mantenimiento adecuado garantiza una producción óptima y
+                alarga la vida útil de tus paneles solares.
+              </p>
+              <ul class="mt-2">
+                <p class="font-bold">Incluye:</p>
+                <li>
+                  ✔️ Limpieza profesional para eliminar suciedad y residuos 🧼
+                </li>
+                <li>✔️ Revisión de conexiones y estado de los inversores 🔍</li>
+                <li>✔️ Detección de fallos para evitar pérdidas de energía</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base/7 font-semibold text-text">
+              <div
+                class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-secondary"
+              >
+                <HomeStats />
+              </div>
+              Optimización y Ampliación de Instalaciones Solares
+            </dt>
+            <dd class="mt-2 text-base/7 text-gray-600">
+              <p class="font-bold">
+                Mejora el rendimiento de tu sistema y aumenta su capacidad
+              </p>
+              <p class="mt-2">
+                Si tu instalación solar no está generando la energía esperada,
+                podemos optimizarla o ampliarla con nuevos paneles y baterías.
+              </p>
+              <ul class="mt-2">
+                <p class="font-bold">Ventajas de la optimización:</p>
+                <li>
+                  ✔️ Mayor eficiencia energética sin cambiar toda la instalación
+                  ♻️
+                </li>
+                <li>✔️ Reducción de pérdidas por sombras o suciedad 🚀</li>
+                <li>
+                  ✔️ Integración con baterías solares para mayor autonomía 🔋
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </Container>
+</section>
