@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro'
 import "@/styles/global.css";
 import "@fontsource-variable/montserrat";
 // Supports weights 200-900
@@ -33,5 +34,6 @@ import Footer from "@/components/Footer.astro";
     <Header />
     <slot />
     <Footer />
+    <Analytics />
   </body>
 </html>
