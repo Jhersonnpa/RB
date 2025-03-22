@@ -1,0 +1,54 @@
+---
+import Whatsapp from "@/components/icons/whatsapp.astro";
+---
+
+<button
+  class="whatsapp-button flex p-1 md:px-3 md:py-1.5 bg-green-600 hover:bg-primary rounded-full md:rounded-md text-white transition-colors cursor-pointer"
+>
+  <Whatsapp />
+  <span class="hidden md:block">Pide presupuesto</span>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.getElementsByClassName("whatsapp-button");
+
+    if (!buttons) return;
+
+    Array.from(buttons).forEach((button) => {
+      button.addEventListener("click", async () => {
+        try {
+          // Obtener IP del usuario
+          const res = await fetch("https://ipapi.co/json/");
+          if (!res.ok) throw new Error("Error en la petición");
+
+          const result = await res.json();
+          const userData = {
+            ip: result.ip,
+            city: result.city,
+            country: result.country,
+          };
+
+          // Enviar datos a la API de Astro
+          const apiUrl = "/api/updateClick";
+
+          const apiRes = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData),
+          });
+
+          if (!apiRes.ok) {
+            console.log(apiRes);
+            throw new Error("Error al guardar en la base de datos");
+          }
+
+          // Redirigir a WhatsApp solo si estamos en el navegador
+          window.open("https://wa.me/34692488608", "_blank");
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      });
+    });
+  });
+</script>

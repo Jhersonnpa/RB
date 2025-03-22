@@ -4,7 +4,7 @@ import X from "@/components/icons/x.astro";
 ---
 
 <div
-  class="md:hidden w-full h-screen fixed left-0 -top-[100vh] bg-background container mx-auto p-4 z-10"
+  class="md:hidden w-full h-screen fixed left-0 -top-[100dvh] bg-background container mx-auto p-4 z-100"
   id="navbar-mobile"
 >
   <div class="flex justify-between items-center p-4">
@@ -31,14 +31,14 @@ import X from "@/components/icons/x.astro";
       <a
         class="hover:text-primary transition-colors"
         onclick="closeNavbar()"
-        href="#portfolio">Casos de Éxito</a
+        href="#benefits">Beneficios</a
       >
     </li>
     <li>
       <a
         class="hover:text-primary transition-colors"
         onclick="closeNavbar()"
-        href="#contact">Contacto</a
+        href="#projects">Proyectos <span class="text-xs text-primary">(Proximamente)</span></a
       >
     </li>
   </ul>
@@ -50,7 +50,7 @@ import X from "@/components/icons/x.astro";
       top: 0;
     }
     100% {
-      top: -100vh;
+      top: -100dvh;
     }
   }
 </style>

@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.2.0",
     "@fontsource-variable/montserrat": "^5.1.1",
     "@fontsource-variable/nunito-sans": "^5.1.1",
+    "@supabase/supabase-js": "^2.49.1",
     "@tailwindcss/vite": "^4.0.6",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",

@@ -1,37 +1,42 @@
 ---
 import { Image } from "astro:assets";
 import NavbarMobile from "@/components/NavbarMobile.astro";
-import Whatsapp from "@/components/icons/whatsapp.astro";
+// import Whatsapp from "@/components/icons/whatsapp";
 import Burger from "@/components/icons/burger.astro";
+import WhatsapUpdate from "./WhatsapUpdate.astro";
 ---
 
-<header class="container mx-auto p-2">
-  <nav class="w-full flex justify-between items-center">
+<header class="p-2 sticky">
+  <nav class="container mx-auto w-full flex justify-between items-center">
     <a href="/" rel="noopener noreferrer"
       ><Image
         src="/Logo_RB_6.webp"
         alt={"Logo de la empresa"}
         width={100}
         height={100}
-        class="w-48"
+        class="w-48 h-full"
       /></a
     >
     <ul class="hidden md:flex justify-evenly items-center gap-6 font-semibold">
       <li>
         <a class="hover:text-primary transition-colors" href="#services"
-          >Servicios</a>
+          >Servicios</a
+        >
       </li>
       <li>
-        <a class="hover:text-primary transition-colors" href="#portfolio"
-          >Casos de Éxito</a>
+        <a class="hover:text-primary transition-colors" href="#benefits"
+          >Beneficios</a
+        >
       </li>
       <li>
-        <a class="hover:text-primary transition-colors" href="#contact"
-          >Contacto</a>
+        <a class="hover:text-primary transition-colors" href="#projects"
+          >Proyectos <span class="text-xs text-primary">(Proximamente)</span></a
+        >
       </li>
     </ul>
     <div class="flex gap-3">
-      <a
+      <WhatsapUpdate />
+      <!-- <a
         name="Whatsapp"
         href="https://wa.me/34692488608"
         target="_blank"
@@ -39,16 +44,38 @@ import Burger from "@/components/icons/burger.astro";
         aria-label="Pide presupuesto"
         class="flex p-1 md:px-3 md:py-1.5 bg-green-600 hover:bg-green-600/60 rounded-full md:rounded-md text-white transition-colors"
         ><Whatsapp /> <span class="hidden md:block">Pide presupuesto</span></a
+      > -->
+      <button
+        id="navbar-mobileBurguer"
+        class="md:hidden"
+        aria-label="navbarButton"><Burger /></button
       >
-      <button class="md:hidden" aria-label="navbarButton"><Burger /></button>
     </div>
     <NavbarMobile />
   </nav>
 </header>
 
 <style>
+  header {
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0px;
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+    z-index: 1000;
+  }
 
-
+  @keyframes adjust-header {
+    to {
+      background: rgba(235, 243, 237, 0.6);
+      font-size: 15px;
+      width: 100%;
+      border-radius: 0;
+      padding: 2px;
+      /* color: rgb(235, 243, 237) */
+    }
+  }
   @keyframes openNavBar {
     0% {
       top: -120%;
@@ -60,9 +87,11 @@ import Burger from "@/components/icons/burger.astro";
 </style>
 
 <script is:inline>
-  document.querySelector("button").addEventListener("click", () => {
-    const navbar = document.getElementById("navbar-mobile");
-    
-    navbar?.style.setProperty("animation", "openNavBar 0.5s forwards");
-  });
+  const navbarMobileBurguer = document.getElementById("navbar-mobileBurguer");
+  if (navbarMobileBurguer) {
+    navbarMobileBurguer.addEventListener("click", () => {
+      const navbarMobile = document.getElementById("navbar-mobile");
+      navbarMobile.style.setProperty("animation", "openNavBar 0.5s forwards");
+    });
+  }
 </script>
