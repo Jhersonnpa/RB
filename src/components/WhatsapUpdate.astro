@@ -2,12 +2,16 @@
 import Whatsapp from "@/components/icons/whatsapp.astro";
 ---
 
-<button
+<a
+  name="Whatsapp"
+  href="https://wa.me/34692488608"
+  target="_blank"
+  rel="noopener noreferrer"
   class="whatsapp-button flex p-1 md:px-3 md:py-1.5 bg-green-600 hover:bg-primary rounded-full md:rounded-md text-white transition-colors cursor-pointer"
 >
   <Whatsapp />
   <span class="hidden md:block">Pide presupuesto</span>
-</button>
+</a>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -19,14 +23,14 @@ import Whatsapp from "@/components/icons/whatsapp.astro";
       button.addEventListener("click", async () => {
         try {
           // Obtener IP del usuario
-          const res = await fetch("https://ipapi.co/json/");
+          const res = await fetch("https://ip.guide/");
           if (!res.ok) throw new Error("Error en la petición");
 
           const result = await res.json();
           const userData = {
             ip: result.ip,
-            city: result.city,
-            country: result.country,
+            city: result.location.city,
+            country: result.location.country,
           };
 
           // Enviar datos a la API de Astro
