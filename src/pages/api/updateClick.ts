@@ -2,11 +2,13 @@ export const prerender = false;
 import { createClient } from "@supabase/supabase-js";
 
 // Configuración de Supabase
-const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
-const supabaseKey = import.meta.env.PUBLIC_SUPABASE_KEY;
+const supabaseUrl = process.env.PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.PUBLIC_SUPABASE_KEY;
+
+console.log("Supabase URL:", supabaseUrl);
+console.log("Supabase Key:", supabaseKey ? "Definida" : "No definida");
 
 if (!supabaseUrl || !supabaseKey) {
-  console.log(supabaseUrl, supabaseKey);
   throw new Error("Faltan las variables de entorno de Supabase.");
 }
 
